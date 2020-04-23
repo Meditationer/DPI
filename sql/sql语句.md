@@ -42,3 +42,4 @@
 + 插入：
    1. INSERT INTO tab_new VALUES ('庚戌','47',NULL,'2','1'),('壬子','49',NULL,'3','4')（两列插入 必须加引号）
    2. insert into table_new column_name select column_name from table_old (复制旧表数据到新表)
+   3. INSERT INTO t_workstation VALUES(NULL,'1','1','2','3','4')当id是自增长的时候，可以用null来插入
