@@ -2,7 +2,8 @@
 
 + 查看表结构：desc tab_name
 + 所有字段信息：SHOW FULL COLUMNS FROM tb_user;
-+ 统计：  select count(c='1' or null) from table_name(求c=的总数)
++ 统计：  select count(c='1' or null) from table_name(求c=的总数)，count(*)/count(1)是求总数  
+  count(c="1")也是求c中不为空的全部。因为false时是会统计数据的
 + 求值：  select avg() from(求平均，也可max，min，sum)
 + 算年龄： SELECT TIMESTAMPDIFF(YEAR,'1997-09-27',   '2093-12-31') AS age ，year可以替换成day
 + 算一月前的时间：CreateTime < DATE_SUB(NOW(), INTERVAL 1 MONTH)【内就是>,取出的是HHmmss】MONTH(NOW())返回现在的月数  
