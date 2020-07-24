@@ -10,11 +10,10 @@
 
 ## js引用和书写
 
-- `<script type="text/javascript" async src="example.js"></script>`加载外部js,页面会暂停处理，其中对于html来说：先加载`head`所以如果js太多会空白，放body后。加上type表示使用的是javascript可以换java等
-- 可以加上async来进行立即下载，延迟执行，可以放`head`中了，(异步)如上确保两者之间互不依赖，
-- "use strict";在标签内加上这个会严格模式，报错一些问题，在js中，如果某个变量没有var声明，会自动移到上一层作用域中找声明语句，有就是这个。没有就套娃到全局。
+- js是‘单线程’语言，执行模式有两种：同步，异步。js默认模式是同步模式，按流水线执行:A,B,C。  
+异步：流水线旁加了一个（任务队列），某些模块到任务队列，或者会把任务队列的某些模块插队到流水线。
 
-## 用法
-
-1. typeof message用于查看是那种类型。var me=Boolean(message)这样转换可以判断字符串是否为空，因为字符串强制转换，""和（空串）都会是false,可以测数值0。可以直接if (me)。如果message='2'是对象的话很可能就改变了程序流程。
-2. var num1 = parseInt("AF",16);解析指定数值类型。16不指定，就自动解析
+- Js的三种引入方式
+   1. 外部引入(外链式):`<script type="text/javascript" src="路径/文件名.js"></script>`
+   2. 内部js：`<script type="text/javascript">js代码</script>`
+   3. 行内引入：`<input type="button" οnclick="alert('行内引入')" value="button" name="button">`(on+事件类型=“js代码”)

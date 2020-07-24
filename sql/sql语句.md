@@ -3,7 +3,7 @@
 + 查看表结构：desc tab_name
 + 所有字段信息：SHOW FULL COLUMNS FROM tb_user;
 + 统计：  select count(c='1' or null) from table_name(求c=的总数)，count(*)/count(1)是求总数  
-  count(c="1")也是求c中不为空的全部。因为false时是会统计数据的
+  count('任意内容')会统计所有记录，count只有在null时不计数，c='1'为false 执行or后面的表达式
 + 求值：  select avg() from(求平均，也可max，min，sum)
 + 算年龄： SELECT TIMESTAMPDIFF(YEAR,'1997-09-27',   '2093-12-31') AS age ，year可以替换成day
 + 算一月前的时间：CreateTime < DATE_SUB(NOW(), INTERVAL 1 MONTH)【内就是>,取出的是HHmmss】MONTH(NOW())返回现在的月数  
@@ -15,6 +15,8 @@
 + <>''和!=''都是不为空，ISNULL(id)和=''都是为空
 + DISTINCT查询不重复的
 + Unix时间戳，是1970年1月1日午夜开始所经过的秒数，UNIX_TIMESTAMP(NOW())（现在）
++ substring(123456,2,2)第二位开始截取2位，是从2开始所以是23
++ COALESCE(sum(helpnum),0)依次参考遇到非null值即停止并返回该值。null,null,1,2返回的就是1
 
 ## 建表,删除和改表语句
 
