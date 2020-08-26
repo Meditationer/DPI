@@ -18,3 +18,11 @@
  var str = "yyyy-MM-dd HH:mm:ss";
  str = str.split(" ")[0]; // yyyy-MM-dd 格式固定的字符串
 ```
+
+## 时间比较大小
+
+CompareDate(d1, d2) {
+
+return ((new Date(d1.replace(/-/g, "\/"))) > (new Date(d2.replace(/-/g, "\/"))));
+
+}

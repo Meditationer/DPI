@@ -106,3 +106,4 @@
   - 文字盒子居中：文字水平居中是 text-align: center盒子水平居中 左右margin 改为 auto
 
 - border : border-width || border-style || border-color。solid线(单实线)、dashed(虚线)、dotted(点线)、double(双实线)
+- 超出隐藏（overflow:hidden）、省略号（text-overflow:ellipsis），强制在同一行显示（white-space: nowrap）、

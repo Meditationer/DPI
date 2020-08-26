@@ -16,8 +16,8 @@
             //keywords(内容中就是关键字)，decription描述百度搜索结果显示，用来帮助你的主页被各大搜索引擎登录，
             //设编码格式等,charset是浏览器来查看网页是什么字符集。name=refresh刷新和重定向
             <!--提供页面元信息如编码，缓存，关键字，渲染模式-->
-            <meta name="decription" charset="utf-8">
-            <meta name="keywords" content="css,java,ui">//用，
+            <meta name="decription" charset="utf-8">//描述内容:
+            <meta name="keywords" content="css,java,ui">//擎定义关键词，
              <!--定义标题，如浏览器工具栏，收藏夹，搜索引擎结果标题-->
             <title> </title>
             <link rel="stylesheet" type="text/css" href="../theme.css" charset=""/>

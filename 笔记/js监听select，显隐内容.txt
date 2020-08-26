@@ -1,4 +1,5 @@
  $(() => {
+ //oninput是在值改变时立即触发，而onchange是在值改变后失去焦点才触发
  //cont 选择器的div的id
         $('#cont select').change(() => {
             var val = $('#cont select').val();
